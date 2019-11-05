@@ -44,6 +44,7 @@ void LandmarkFinderInterface::imgCallback(const sensor_msgs::ImageConstPtr& msg)
     // Show images
     debugVisualizer_.ShowImage(landmarkFinder->grayImage_, "Gray Image");
     debugVisualizer_.ShowImage(landmarkFinder->filteredImage_, "Filtered Image");
+    debugVisualizer_.ShowImage(landmarkFinder->binaryImage_, "Binary Image");
 
     // Show detections
     auto point_img = debugVisualizer_.ShowPoints(landmarkFinder->filteredImage_,
