@@ -15,7 +15,7 @@
   <arg name="map_frame" default="world"/>
   <arg name="camera_frame" default="camera"/>
 
-  <node pkg="stargazer_ros_tool" type="landmark_localizer" name="landmark_localizer" output="screen" required="true">
+  <node pkg="stargazer_ros_tool" type="landmark_localizer" name="landmark_localizer" output="screen">
     <param name="cam_config" value="$(arg cam_config)"/>
     <param name="map_config" value="$(arg map_config)"/>
     <param name="estimate_2d_pose" value="$(arg estimate_2d_pose)"/>
