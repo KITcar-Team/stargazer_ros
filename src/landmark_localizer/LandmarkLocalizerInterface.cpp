@@ -69,12 +69,6 @@ void LandmarkLocalizerInterface::landmarkCallback(
         debugVisualizer_.DrawLandmarks(
             img, localizer_->getLandmarks(), localizer_->getIntrinsics(), pose);
         debugVisualizer_.ShowImage(img, "ReprojectionImage");
-
-        // clang-format off
-//        static int count = 0;
-//        cv::imwrite((boost::format("/home/bandera/Documents/MRT/Papers/ITSC2016/StargazerPaper/pics/reprojection_%010d.jpg") % count).str(),img);
-//        ++count;
-        // clang-format on
     }
 
     const ceres::Solver::Summary& summary =
