@@ -78,4 +78,5 @@ void LandmarkFinderInterface::reconfigureCallback(LandmarkFinderConfig& config,
     landmarkFinder->fwLengthTriangle = params_.cfg.fwLengthTriangle;
     landmarkFinder->fwProjectedSecantLength = params_.cfg.fwProjectedSecantLength;
     landmarkFinder->fwSecantsLengthDiff = params_.cfg.fwSecantsLengthDiff;
+    landmarkFinder->hypotenuseTolerance = params_.cfg.hypotenuseTolerance;
 }
