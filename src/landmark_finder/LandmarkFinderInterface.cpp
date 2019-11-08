@@ -40,19 +40,16 @@ void LandmarkFinderInterface::imgCallback(const sensor_msgs::ImageConstPtr& msg)
 
     // Invert images
     cv::bitwise_not(landmarkFinder->grayImage_, landmarkFinder->grayImage_);
-    cv::bitwise_not(landmarkFinder->filteredImage_, landmarkFinder->filteredImage_);
 
     // Show images
     debugVisualizer_.ShowImage(landmarkFinder->grayImage_, "Gray Image");
-    debugVisualizer_.ShowImage(landmarkFinder->filteredImage_, "Filtered Image");
-    debugVisualizer_.ShowImage(landmarkFinder->binaryImage_, "Binary Image");
 
     // Show detections
-    auto point_img = debugVisualizer_.ShowPoints(landmarkFinder->filteredImage_,
+    auto point_img = debugVisualizer_.ShowPoints(landmarkFinder->grayImage_,
                                                  landmarkFinder->clusteredPixels_);
-    auto cluster_img = debugVisualizer_.ShowClusters(landmarkFinder->filteredImage_,
+    auto cluster_img = debugVisualizer_.ShowClusters(landmarkFinder->grayImage_,
                                                      landmarkFinder->clusteredPoints_);
-    auto hypotheses_img = debugVisualizer_.ShowLandmarkHypotheses(landmarkFinder->filteredImage_,
+    auto hypotheses_img = debugVisualizer_.ShowLandmarkHypotheses(landmarkFinder->grayImage_,
                                                                   landmarkFinder->landmarkHypotheses_);
 
     // Show landmarks
