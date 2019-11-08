@@ -17,9 +17,6 @@ void LandmarkFinderInterfaceParameters::fromNodeHandle(const ros::NodeHandle& nh
     getParam(nh, "threshold", cfg.threshold);
     getParam(nh, "tight_filter_size", cfg.tight_filter_size);
     getParam(nh, "wide_filter_size", cfg.wide_filter_size);
-    getParam(nh, "maxRadiusForPixelCluster", cfg.maxRadiusForPixelCluster);
-    getParam(nh, "minPixelForCluster", cfg.minPixelForCluster);
-    getParam(nh, "maxPixelForCluster", cfg.maxPixelForCluster);
     getParam(nh, "maxRadiusForCluster", cfg.maxRadiusForCluster);
     getParam(nh, "minPointsPerLandmark", cfg.minPointsPerLandmark);
     getParam(nh, "maxPointsPerLandmark", cfg.maxPointsPerLandmark);
