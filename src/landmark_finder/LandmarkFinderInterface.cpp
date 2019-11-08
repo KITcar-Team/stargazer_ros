@@ -71,9 +71,6 @@ void LandmarkFinderInterface::reconfigureCallback(LandmarkFinderConfig& config,
     landmarkFinder->wide_filter_size = static_cast<uint32_t>(params_.cfg.wide_filter_size);
     landmarkFinder->threshold = static_cast<uint8_t>(params_.cfg.threshold);
     landmarkFinder->maxRadiusForCluster = params_.cfg.maxRadiusForCluster;
-    landmarkFinder->maxRadiusForPixelCluster = params_.cfg.maxRadiusForPixelCluster;
-    landmarkFinder->maxPixelForCluster = static_cast<uint16_t>(params_.cfg.maxPixelForCluster);
-    landmarkFinder->minPixelForCluster = static_cast<uint16_t>(params_.cfg.minPixelForCluster);
     landmarkFinder->maxPointsPerLandmark = static_cast<uint16_t>(params_.cfg.maxPointsPerLandmark);
     landmarkFinder->minPointsPerLandmark = static_cast<uint16_t>(params_.cfg.minPointsPerLandmark);
     landmarkFinder->fwLengthTriangle = params_.cfg.fwLengthTriangle;
