@@ -2,6 +2,7 @@
 
 #include "../StargazerConversionMethods.h"
 #include "../ros_utils.h"
+#include <opencv2/features2d.hpp>
 
 using namespace stargazer_ros_tool;
 
@@ -79,4 +80,22 @@ void LandmarkFinderInterface::reconfigureCallback(LandmarkFinderConfig& config,
     landmarkFinder->fwProjectedSecantLength = params_.cfg.fwProjectedSecantLength;
     landmarkFinder->fwSecantsLengthDiff = params_.cfg.fwSecantsLengthDiff;
     landmarkFinder->hypotenuseTolerance = params_.cfg.hypotenuseTolerance;
+
+    landmarkFinder->blobParams.filterByArea = params_.cfg.blobFilterByArea;
+    landmarkFinder->blobParams.filterByCircularity = params_.cfg.blobFilterByCircularity;
+    landmarkFinder->blobParams.filterByConvexity = params_.cfg.blobFilterByConvexity;
+    landmarkFinder->blobParams.filterByInertia = params_.cfg.blobFilterByInertia;
+    landmarkFinder->blobParams.maxArea = params_.cfg.blobMaxArea;
+    landmarkFinder->blobParams.maxCircularity = params_.cfg.blobMaxCircularity;
+    landmarkFinder->blobParams.maxConvexity = params_.cfg.blobMaxConvexity;
+    landmarkFinder->blobParams.maxInertiaRatio = params_.cfg.blobMaxInertiaRatio;
+    landmarkFinder->blobParams.maxThreshold = params_.cfg.blobMaxThreshold;
+    landmarkFinder->blobParams.minArea = params_.cfg.blobMinArea;
+    landmarkFinder->blobParams.minCircularity = params_.cfg.blobMinCircularity;
+    landmarkFinder->blobParams.minConvexity = params_.cfg.blobMinConvexity;
+    landmarkFinder->blobParams.minDistBetweenBlobs = params_.cfg.blobMinDistBetweenBlobs;
+    landmarkFinder->blobParams.minInertiaRatio = params_.cfg.blobMinInertiaRatio;
+    landmarkFinder->blobParams.minRepeatability = params_.cfg.blobMinRepeatability;
+    landmarkFinder->blobParams.minThreshold = params_.cfg.blobMinThreshold;
+    landmarkFinder->blobParams.thresholdStep = params_.cfg.blobThresholdStep;
 }
