@@ -76,6 +76,8 @@ void LandmarkFinderInterface::reconfigureCallback(LandmarkFinderConfig& config,
     landmarkFinder->maxPointsPerLandmark = static_cast<uint16_t>(params_.cfg.maxPointsPerLandmark);
     landmarkFinder->minPointsPerLandmark = static_cast<uint16_t>(params_.cfg.minPointsPerLandmark);
     landmarkFinder->fwLengthTriangle = params_.cfg.fwLengthTriangle;
+    landmarkFinder->maxCornerHypotheses = params_.cfg.maxCornerHypotheses;
+    landmarkFinder->cornerHypothesesCutoff = params_.cfg.cornerHypothesesCutoff;
     landmarkFinder->fwProjectedSecantLength = params_.cfg.fwProjectedSecantLength;
     landmarkFinder->fwSecantsLengthDiff = params_.cfg.fwSecantsLengthDiff;
     landmarkFinder->hypotenuseTolerance = params_.cfg.hypotenuseTolerance;
