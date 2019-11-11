@@ -17,6 +17,8 @@ void LandmarkFinderInterfaceParameters::fromNodeHandle(const ros::NodeHandle& nh
     getParam(nh, "maxRadiusForCluster", cfg.maxRadiusForCluster);
     getParam(nh, "minPointsPerLandmark", cfg.minPointsPerLandmark);
     getParam(nh, "maxPointsPerLandmark", cfg.maxPointsPerLandmark);
+    getParam(nh, "maxCornerHypotheses", cfg.maxCornerHypotheses);
+    getParam(nh, "cornerHypothesesCutoff", cfg.cornerHypothesesCutoff);
 
     getParam(nh, "blobFilterByArea", cfg.blobFilterByArea);
     getParam(nh, "blobFilterByCircularity", cfg.blobFilterByCircularity);
