@@ -19,6 +19,10 @@ void LandmarkFinderInterfaceParameters::fromNodeHandle(const ros::NodeHandle& nh
     getParam(nh, "maxPointsPerLandmark", cfg.maxPointsPerLandmark);
     getParam(nh, "maxCornerHypotheses", cfg.maxCornerHypotheses);
     getParam(nh, "cornerHypothesesCutoff", cfg.cornerHypothesesCutoff);
+    getParam(nh, "fwLengthTriangle", cfg.fwLengthTriangle);
+    getParam(nh, "fwProjectedSecantLength", cfg.fwProjectedSecantLength);
+    getParam(nh, "fwSecantsLengthDiff", cfg.fwSecantsLengthDiff);
+    getParam(nh, "hypotenuseTolerance", cfg.hypotenuseTolerance);
 
     getParam(nh, "blobFilterByArea", cfg.blobFilterByArea);
     getParam(nh, "blobFilterByCircularity", cfg.blobFilterByCircularity);
